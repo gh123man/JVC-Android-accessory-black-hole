@@ -1,0 +1,26 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.ghsoft.jvcblackhole">
+
+    <application android:allowBackup="true"
+                 android:label="@string/app_name"
+                 android:icon="@mipmap/ic_launcher">
+
+        <activity
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoDisplay"
+            android:name=".Main" >
+            <meta-data android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED" android:resource="@xml/accessory_filter"/>
+            <intent-filter >
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"/>
+                <action android:name="com.jvckenwood.ao2.jvc.musicplay.action.AOACONNECTED"/>
+                <action android:name="com.jvckenwood.ao2.jvc.musicplay.action.AOACONNECTED_OBJ"/>
+                <action android:name="com.jvckenwood.ao2.jvc.musicplay.action.ACTION_SHUTDOWN"/>
+                <action android:name="com.jvckenwood.ao2.jvc.musicplay.action.ACTION_DISCONNECT_LINK"/>
+                <action android:name="com.jvckenwood.ao2.jvc.musicplay.action.BLUETOOTH_INIT"/>
+                <action android:name="com.jvckenwood.ao2.jvc.musicplay.action.BLUETOOTH_PAIR"/>
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
